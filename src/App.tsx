@@ -1,6 +1,3 @@
-import React from "react";
-import firebase from "firebase/app";
-import "firebase/auth";
 import Navbar from "components/Navbar";
 import { ReactComponent as Spikes } from "assets/spikes.svg";
 import { ReactComponent as Editor } from "assets/editor.svg";
@@ -16,7 +13,7 @@ function App() {
       <Navbar></Navbar>
       <div className="h-screen bg-blue-400 relative flex py-32">
         <div className="flex justify-between px-12 items-center relative z-10 max-w-1200px w-full m-auto">
-          <div className="pr-12">
+          <div className="md:pr-12">
             <div className="text-white text-36px font-semibold">Firebase headless cms</div>
             <div className="text-white text-22px font-medium mb-7">
               Production API in seconds for free
@@ -25,7 +22,7 @@ function App() {
               Get started
             </Button>
           </div>
-          <Editor></Editor>
+          <Editor className="hidden md:block"></Editor>
         </div>
         <div className="absolute left-0 bottom-0 w-full flex justify-center overflow-hidden">
           <Spikes style={{ minWidth: 1400 }}></Spikes>
