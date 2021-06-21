@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               <a
                 href={x.href}
                 target="_blank"
-                className="px-7 cursor-pointer mb-3 bg-white bg-opacity-10 rounded-lg h-42px leading-42px block"
+                className="px-7 text-center cursor-pointer mb-3 bg-white bg-opacity-10 rounded-lg h-42px leading-42px block"
               >
                 {x.label}
               </a>
