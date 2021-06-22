@@ -52,7 +52,7 @@ module.exports = {
       colors: {
         blue: {
           300: "#33A1FD",
-          400: "#2176FF",
+          400: "#091717",
         },
         gray: {
           100: "#FAFAFB",
@@ -63,8 +63,8 @@ module.exports = {
           600: "#6F6F6F",
         },
         orange: {
-          300: "#FDCA40",
-          301: "#FFBA00",
+          300: "#23F3F3",
+          301: "#21B7B7",
           400: "#F79824",
         },
         green: {

@@ -1,4 +1,4 @@
-import Logo from "assets/logo.png";
+import Logo from "assets/logo.svg";
 import NetlifyButton from "./NetlifyButton";
 import Drawer from "@material-ui/core/Drawer";
 import { useState } from "react";
