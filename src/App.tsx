@@ -25,7 +25,9 @@ function App() {
           <Editor className="hidden md:block"></Editor>
         </div>
         <div className="absolute left-0 bottom-0 w-full flex justify-center overflow-hidden">
-          <Spikes style={{ minWidth: 1400 }}></Spikes>
+          <div>
+            <Spikes></Spikes>
+          </div>
         </div>
       </div>
     </div>
