@@ -1,7 +1,7 @@
 import Logo from "assets/logo.svg";
 import NetlifyButton from "./NetlifyButton";
 import Drawer from "@material-ui/core/Drawer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuRounded from "@material-ui/icons/MenuRounded";
 
 export interface NavbarProps {}
@@ -14,8 +14,23 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   const [open, setOpen] = useState(false);
 
+  const [isNavbarAtTop, setIsNavbarAtTop] = useState(true);
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      setIsNavbarAtTop(window.scrollY === 0);
+    });
+  }, []);
+
   return (
-    <div className="fixed z-10 left-0 top-0 w-full p-7 flex justify-between items-center text-white font-medium">
+    <div
+      className={`fixed z-20 left-0 top-0 w-full transition-all px-7 ${
+        isNavbarAtTop ? "py-7" : "py-4"
+      } flex justify-between items-center text-white font-medium ${
+        isNavbarAtTop ? "" : "bg-blue-400"
+      }`}
+    >
       <img width={135} src={Logo}></img>
       <div className="hidden md:flex items-center">
         {menuItems.map((x, i) => (
